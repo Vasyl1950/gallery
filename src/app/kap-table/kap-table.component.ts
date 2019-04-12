@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from './shared1/users.service';
 
+
 @Component({
   selector: 'app-kap-table',
   templateUrl: './kap-table.component.html',
@@ -20,7 +21,7 @@ export class KapTableComponent implements OnInit {
     
   }
 
-  public shownModal() {
+  public showModal() {
     this.imgIndex = this.imgIndex;
   }
 }

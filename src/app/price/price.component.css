@@ -37,8 +37,8 @@ background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAA
 
 .table td, .table th {
     padding: .3rem;
-    vertical-align: middle;
-    border: 3px solid #eceeef;
+    vertical-align: inherit;
+    border-top: 3px solid #eceeef;
  color: #212529;
 }
 
@@ -46,7 +46,6 @@ th{
     color: #fff !important;
     background-color:#64758966;
 }
-
 table{
       border: 5px double #000;
       font-size: 12px !important;

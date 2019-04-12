@@ -1,43 +1,40 @@
-<div>
-<h1>Накриття на стовпчики паркана</h1>
-</div>
 <table datatable class="table table-striped table-bordered table-hover table-responsive ">
   <tr>
-    <th colspan="4" class="white-text text-center">Ціни продукції в грн.</th>
+    <th colspan="4" class="white-text">Ціни продукції в грн.</th>
 
   </tr>
   <tr>
-    <th>id</th>
-    <th class="white-text text-center">Назва</th>
+    <th>ID</th>
+    <th>Назва</th>
     <th>Розмір в см</th>
     <th>Ціна</th>
   </tr>
 
-  <tr *ngFor=" let kap of users;index as i ">
+  <tr *ngFor=" let kap of users;let i = index ">
 
-    <td> {{i+1}}</td>
+    <td style="vertical-align: middle;"> {{i+1}}</td>
 
     <td >
-      <img src="./assets/images/{{kap.photo}}"  (onclick)="shownModal(i)"   
-    		class="img-fluid img-thumbnail" width="300"  title={{kap.caption}} />
+      <img  src="./assets/images/{{kap.photo}} " onclick="showModal(i)"    
+    		class="img-responsive" width="200" height="160" title={{kap.caption}} />
       <h4 >{{kap.caption}}</h4>
     </td>
 
-    <td>
+    <td style="vertical-align: middle;">
       <div>{{kap.firstName}}</div>
       <div>{{kap.secondName}}</div>
     </td>
 
-    <td>
+    <td style="vertical-align: middle;">
       <div >{{kap.lastName}}</div>
       <div >{{kap.last1Name}}</div>
     </td>
 </tr>
 </table>
 
-<div *ngIf='imgId' class="modal">
+<div *ngIf='photoIndex' class="modal">
     <div class="modal-content">
-       <img src="'./assets/images/'+ users[imgId].modal"
-       width="200"  alt="">
+       <img [src]="'./assets/images/'+ users[photoIndex].photo"
+       width="400" height="320" alt="">
   </div>
 </div>

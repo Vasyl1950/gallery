@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
@@ -18,7 +19,8 @@ import { ImageDetailComponent } from './image/image-detail.component';
 import { routes } from './app-routing.module';
 import { KapTableComponent } from './kap-table/kap-table.component';
 import { UsersService } from './kap-table/shared1/users.service';
-import { ExcelService } from './kap-table/shared1/excel.service';
+import { NgbdModalKap } from './modal-kap';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { ExcelService } from './kap-table/shared1/excel.service';
     GalleryComponent,
     ImageDetailComponent,
     ImageFilterPipe,
-    KapTableComponent
+    KapTableComponent,
+    NgbdModalKap
     ],
   imports: [
     BrowserModule,
@@ -41,15 +44,14 @@ import { ExcelService } from './kap-table/shared1/excel.service';
        // please get your own API key here:
       // https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en
       apiKey: 'AIzaSyDHJyUqsrz-sBCRxwAkIeWaEqbAJJF8Ebg' }),
+      NgbModule.forRoot(),
     BrowserAnimationsModule
     ],
    providers: [
     ImageService,
     ImageFilterPipe,
-    UsersService,
-    ExcelService
+    UsersService
     ],
    bootstrap: [AppComponent]
-  
 })
 export class AppModule { }

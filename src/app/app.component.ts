@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NgbdModalKap} from './modal-kap';
 
 @Component({
   selector: 'app-root',

@@ -11,6 +11,7 @@ import { NavbarComponent} from './navbar/navbar.component'
  export const routes: Routes = [
 
       {path: "" , component: HomeComponent},
+      {path: 'home', component: HomeComponent},
       {path: 'navbar', component: NavbarComponent},
       {path: 'page', component: PageComponent},
       {path: 'price', component: PriceComponent},

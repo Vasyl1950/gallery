@@ -2,7 +2,6 @@ img{
 	max-width: 250px;
 	float: left;
 	vertical-align: middle
-	
 }
 table{
 	background-color: #9f9a9a;
@@ -13,8 +12,7 @@ table tbody td{
 	font-size: 15px;
 	font-weight: 700;
 	padding: 10px !important;
-	height: 100%;
-	vertical-align: middle;	
+    height: 100%;	
 }
 
 h4{
